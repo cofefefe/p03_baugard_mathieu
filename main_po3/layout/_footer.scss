@@ -1,0 +1,61 @@
+@import "../utils/variables";
+
+/* footer index */
+
+.footer{
+    width:auto;
+    height:230px;
+    margin-bottom:0;
+    background-color:#353535;
+    color:white;
+    padding-left:8%;
+    font-family: roboto,'Times New Roman', Times, serif;
+    line-height:10px;
+
+    &__p{
+        margin-bottom:0;
+    }
+
+    img{
+        max-width:100px;
+        max-height:50px;
+        filter:brightness(2000%);
+        margin-top:20px;
+        margin-bottom:20px;
+        object-fit: cover;
+    }
+
+    &__item{
+        display:flex;
+        flex-direction:row;
+    }
+
+    i{
+        padding-top:11px;
+        padding-right:10px
+    }
+
+    a {
+        text-decoration:none;
+        color:white;
+    }
+
+    &__lasttxt{
+        padding-bottom:30px;
+        padding-top:5px
+    }
+
+
+    &__txt{
+        margin-left:0px;
+    }
+
+    &__txt2{
+        margin-left:5px;
+    }
+}
+
+
+
+/* footer page restaurants */
+

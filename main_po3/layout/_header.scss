@@ -1,0 +1,46 @@
+@import "../utils/variables";
+
+/* Header index */
+
+.header{  
+    img{
+        width:170px;
+        height:35px;
+        margin-bottom:18px;
+        margin-top:10px;
+    }
+    @include flex_center;
+    width:100%;
+}
+
+/* Header page secondaire */
+
+header{ 
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+
+    i{
+        align-items:flex-start;
+        font-size:20px;
+        margin-left:20px; 
+        color:black      
+    }
+
+    img{
+        width:170px;
+        height:35px;
+        margin-bottom:18px;
+        margin-top:10px;
+    }
+
+    &__logo{
+        align-self:center;
+        width:170px;
+        height:35px;
+        margin-bottom:18px;
+        margin-top:10px;
+    }
+}
