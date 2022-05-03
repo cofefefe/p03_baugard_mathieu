@@ -1,0 +1,26 @@
+@mixin flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+@mixin button{
+    padding-top:13px;
+    padding-bottom:13px;
+    padding-left:20px;
+    padding-right:20px;
+    background:$gradient-color;
+    border-radius:35px;
+    align-self:center;
+    max-width:240px;
+    @include flex-center;
+    color:white;
+    margin:auto;
+    margin-bottom:45px;
+    margin-top:50px;
+}
+
+@mixin shadowregular {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

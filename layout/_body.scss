@@ -1,0 +1,433 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+
+body{
+    width:100%;
+    margin:0px;
+}
+
+
+html{
+    width:100%;
+}
+
+p{
+    font-family: roboto,'Times New Roman', Times, serif;
+}
+/* body de l'index : menu de selection "fonctionnement", menu "restaurants", menu présentation */
+
+/* " Explorez nos restaurant INDEX */
+.menu{
+    width:100%;
+    @include flex_center;
+    background-color:#f6f6f6;
+    flex-direction:column;
+        a{
+            font-family: roboto, "Times New Roman", Times, serif;
+            text-decoration: none;
+            color: white;
+            height:150px;
+        }
+        &__element{
+            @include flex_center;
+            flex-direction:row;
+            background-color:#eaeaea;
+            width:100%;
+            box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+            padding-top:5px;
+            padding-bottom:5px;
+            font-family: roboto,'Times New Roman', Times, serif;
+            color:#353535;
+        }
+        i{
+            padding-right:15px;
+            padding-bottom:5px;
+        }
+        &__card{
+            text-align:center;
+            max-width:60%;
+            @include flex_center;
+            flex-direction:column
+        }
+        .btn{
+        @include button;
+        }
+        h1, p{
+            font-family:roboto,'Times New Roman', Times, serif;
+        }
+}
+
+
+
+/* Menu Fonctionnement INDEX*/
+
+.working{
+
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    & h2{
+        font-family:roboto, 'Times New Roman', Times, serif;
+        margin-left:5%;
+        font-size:22px;
+        min-width:100%;
+        align-self:flex-start
+    }
+
+    &__block{
+        width:280px;
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    &__block{
+        font-family:roboto,'Times New Roman', Times, serif;
+        font-size:14px;
+        margin:auto;
+        width:330px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        background-color:#f2f2f2;
+        margin-bottom:20px;
+        padding-top:15px;
+        padding-bottom:15px;
+        border-radius:20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    & a{
+        display:flex;
+        flex-direction:row;
+        text-decoration:none;
+    }
+
+    &__txt{
+        margin-left:12%;
+        min-width:180px;
+        color:black;
+    }
+
+    &__icon{
+        padding-left:10px;
+        padding-right:10px;
+        color:#7e7e7e;
+        margin-left:2%
+    }
+
+
+    &__item{
+        border:1px solid #9356dc;
+        height:25px;
+        width:25px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:50%;
+        background-color:#9356dc;
+        color:white;
+        position:relative;
+        right:12px;
+        
+    }
+}
+
+/* MQ menu fonctionnement */
+
+@media screen and (min-width:880px){
+    .working{
+        display:flex;
+        position:relative;
+        nav{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        }
+        h2{
+            min-width:100%;
+            position:relative;
+            left:8%;
+        }
+        &__block{
+            width:260px;
+            margin-left:15px;
+            margin-right:15px;
+        }
+        &__item{
+            height:10px;
+            width:25px;
+            padding:8px;
+        }
+    }
+}
+/* Listes de restaurants INDEX*/
+.container{
+    height:1300px;
+    min-width:100%;
+    background-color:#f6f6f6;
+    display:block;
+    flex-direction:column;
+    margin-top:50px;
+    position:relative;
+
+    &__all{
+        width: fit-content;
+        margin:auto;
+        width:90%;
+    }
+
+    a{
+        cursor:pointer;
+    }
+
+
+    &__title{
+        padding-top:30px;
+        display:flex;
+        font-family: roboto,'Times New Roman', Times, serif;
+        width:100%;
+    }
+
+    img{
+        object-fit:cover;
+        height:12rem;
+        width:100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+
+    &__block{
+        background-color:white;
+        font-family:roboto, 'Times New Roman', Times, serif;
+        margin-bottom:40px;
+        width:90%;
+        display:flex;
+        flex-direction:column;
+        margin-right:15px;
+        margin-left:15px;
+        border-radius:15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position:relative;
+    }
+
+    h2{
+        width:100%;
+        min-width:100%;
+        
+    }
+
+    &__txt{
+        display:flex;
+        flex-direction:column;  
+        margin-left:5%;
+        height:70px;
+    }
+
+    i{
+        margin-right:5%;
+        font-size:1.5rem;
+        
+    }
+
+    .fa-hearth, .fa-solid, &__hearth{
+        color:$gradient-color;
+    }
+
+    &__element{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        line-height:0px;
+        height:70px;
+    }
+
+    &__item{
+        position:relative;
+        bottom:190px;
+        left:245px;
+        background-color:#99e2d0;
+        color:#139273;
+        width:57px;
+        padding:10px;
+        font-size:14px;
+    }
+}
+
+/* media querries index */
+
+@media screen and (min-width:700px) {
+    .container{
+        height:auto;
+
+        &__all{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        height:auto;
+        }
+
+        h2{
+            min-width:fit-content;
+            position: relative;
+            left: 2%;
+        }
+        &__title{
+            min-width:100%;
+        }
+    }
+}
+
+@media screen and (min-width:1000px){
+    .container{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        &__block{
+            max-width: 46%;
+        }
+    }
+}
+
+/* Body secondary-page : baneer pic, menus des restaurants (entrees,plats,desserts)*/
+
+.main{
+    position:relative;
+    margin-bottom:-40px;
+    
+    img{
+        width:100%;
+        height:250px;
+        margin-left:0px;
+        margin-right:0px;
+        object-fit: cover;;
+    }
+
+    &__title{
+        @include flex-center;
+        justify-content:space-between;
+        margin-left:15%;
+
+        .fa-solid, .fa-heart{
+            font-size:23px;
+        }
+    }
+
+    i{
+        padding-left:23px;
+        margin-right:15%
+    }
+
+    &__container{
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        position:relative;
+        bottom:38px;
+        background-color:#f6f6f6;
+        border-top: 1px #f6f6f6 solid;
+        padding-bottom:50px;
+        height:auto;
+    }
+
+    &__block{
+        margin-left:5.33%;
+    }
+
+    h3{
+        border-bottom:$color-tertiary solid 3px;
+        width:40px;
+        padding-bottom:8px;
+        font-family:roboto, 'Times New Roman', Times, serif;
+    }
+    &__value{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+
+    &__price{
+        margin-right:5.33%;
+    }
+
+    &__bold{
+        font-weight:bold;
+    }
+
+    &__element{
+        background-color:white;
+        margin-bottom:15px;
+        margin-right:5.33%;
+        border-radius:20px;
+        padding:10px;
+    }
+    p{
+        margin-top:0;
+        margin-bottom:0;
+        font-family: roboto, 'Times New Roman', Times, serif;
+    }
+
+    .btn{
+    @include button;
+    }
+
+    a{
+        cursor:pointer;
+    }
+    
+    h2{
+        font-family:title, 'Times New Roman', Times, serif;
+        letter-spacing: 0.7px;
+    }
+}
+
+@media screen and (min-width:1110px){
+    .main{
+        position:relative;
+
+        &__container{
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content:space-between;
+        }
+
+        h2{
+            position:relative;
+            padding-right:60%;
+        }
+
+        &__title{
+            min-width:84%;
+            @include flex-center;
+        }
+
+        &__element{
+            padding:15px;
+        }
+
+        &__content{
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            margin-right:15px;
+            margin-left:15px;
+        }
+
+        &__block{
+            margin-left:5px;
+            margin-right:5px;
+        }
+        
+    }
+}
+
+.btn:hover{
+    box-shadow: 10px 0px 15px 5px rgb(255 121 218 / 50%), 0px 10px 15px 5px rgb(147 86 220 / 50%);
+    border: rgba(255, 255, 255, 0.5 ) 0.01rem solid;
+}
+
