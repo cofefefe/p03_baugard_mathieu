@@ -1,5 +1,6 @@
 @import "../utils/variables";
 @import "../utils/mixin";
+@import "../sass/animation";
 
 body{
     width:100%;
@@ -335,7 +336,7 @@ p{
     }
 
     &__block{
-        margin-left:5.33%;
+        margin-left:5px;
     }
 
     h3{
@@ -343,15 +344,12 @@ p{
         width:40px;
         padding-bottom:8px;
         font-family:roboto, 'Times New Roman', Times, serif;
+        margin-left:10px;
     }
     &__value{
         display:flex;
         flex-direction:row;
         justify-content:space-between;
-    }
-
-    &__price{
-        margin-right:5.33%;
     }
 
     &__bold{
@@ -361,9 +359,14 @@ p{
     &__element{
         background-color:white;
         margin-bottom:15px;
-        margin-right:5.33%;
+        margin-right:10px;
+        margin-left:10px;
         border-radius:20px;
         padding:10px;
+        animation: appear .6s;
+        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+        animation-fill-mode: both;
+        transform: scale(0);
     }
     p{
         margin-top:0;
@@ -385,6 +388,18 @@ p{
     }
 }
 
+.delay-1{
+    animation-delay: .2s;
+}
+
+.delay-2{
+    animation-delay: .4s
+}
+
+.delay-3{
+    animation-delay: .6s;
+}
+
 @media screen and (min-width:1110px){
     .main{
         position:relative;
@@ -398,7 +413,7 @@ p{
 
         h2{
             position:relative;
-            padding-right:60%;
+            padding-right:50%;
         }
 
         &__title{
@@ -407,7 +422,10 @@ p{
         }
 
         &__element{
-            padding:15px;
+            padding: 15px;
+            width: 320px;
+            margin-bottom: 20p;
+            margin-top: 30px;
         }
 
         &__content{
@@ -417,12 +435,15 @@ p{
             margin-right:15px;
             margin-left:15px;
         }
-
+s
         &__block{
             margin-left:5px;
             margin-right:5px;
         }
         
+        &__price{
+            margin-left:0;
+        }
     }
 }
 
