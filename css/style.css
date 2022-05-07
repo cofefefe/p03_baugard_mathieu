@@ -11,14 +11,6 @@
   font-family: title;
   src: url(../ressources/font/Shrikhand-Regular.ttf);
 }
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 body {
   width: 100%;
   margin: 0px;
@@ -94,6 +86,8 @@ p {
   font-family: roboto, "Times New Roman", Times, serif;
 }
 
+/* modif fichier */
+/* modif fichier 2 */
 /* Menu Fonctionnement INDEX*/
 .working {
   width: 100%;
@@ -335,6 +329,7 @@ p {
 }
 .main__block {
   margin-left: 5px;
+  position: relative;
 }
 .main h3 {
   border-bottom: #99E2D0 solid 3px;
@@ -391,6 +386,32 @@ p {
 .main h2 {
   font-family: title, "Times New Roman", Times, serif;
   letter-spacing: 0.7px;
+}
+.main__spin {
+  padding-top: 20px;
+  font-size: 22px;
+  padding-bottom: 20px;
+  position: relative;
+  bottom: 27px;
+  margin-right: -50px;
+  width: 40px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(125, 226, 125);
+  color: white;
+  transition: margin-right 0.6s;
+}
+.main span {
+  padding-left: 100px;
+  padding-right: 10px;
+}
+.main:hover .main__spin {
+  margin-right: 0px;
+  transform: rotate(360deg);
+}
+.main:hover .icon {
+  animation: spin 1s;
 }
 
 .delay-1 {
@@ -449,6 +470,33 @@ p {
 .btn:hover {
   box-shadow: 10px 0px 15px 5px rgba(255, 121, 218, 0.5), 0px 10px 15px 5px rgba(147, 86, 220, 0.5);
   border: rgba(255, 255, 255, 0.5) 0.01rem solid;
+}
+
+.emptyheart--top {
+  position: relative;
+  left: 170px;
+}
+.emptyheart--bottom--left {
+  position: relative;
+  left: 189px;
+}
+.emptyheart--bottom--right {
+  position: relative;
+  left: 173px;
+}
+
+.fas {
+  background-image: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+}
+
+.fas:hover {
+  opacity: 1;
 }
 
 /* Header index */
@@ -538,12 +586,25 @@ header__logo {
 }
 
 /* footer page restaurants */
+.heartpage {
+  position: relative;
+  left: 187px;
+}
+
 @keyframes appear {
   0% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 a {

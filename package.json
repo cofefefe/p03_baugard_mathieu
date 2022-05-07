@@ -1,12 +1,19 @@
 {
   "name": "main_po3",
   "version": "1.0.0",
-  "description": "projet P03 OMF",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass" : "../sass/index.scss:../css/style.css",
-
+    "sass": "_index.scss:./css/style.css"
   },
-  "author": "baugard mathieu",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cofefefe/p03_baugard_mathieu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cofefefe/p03_baugard_mathieu/issues"
+  },
+  "homepage": "https://github.com/cofefefe/p03_baugard_mathieu#readme"
 }
