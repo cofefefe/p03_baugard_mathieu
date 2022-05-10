@@ -15,7 +15,7 @@
         </div>
     </a>
 </header>
-<body>
+
     <section class="menu">
         <div class="menu__element">
             <i class="fa-solid fa-location-dot"></i>
@@ -76,60 +76,73 @@
             </a>
         </nav>
     </div>
-    <main class="container">
-    <div class="container__all">
-        <div class="container__title">
-        <h2>Restaurants</h2>
+    <body class="restaurants" id="restaurants">
+        <div class="container__all">
+          <h3 class="restaurants__title">Restaurants</h3>
+          
+          <div class="block">
+            <a class="block__card" href="./la_palette_du_gout.html">
+              <img src="../sass/ressources/images/restaurants/photo1palettedugout.jpg" alt="" class="block__img">
+              <span class="block__item--first">Nouveau</span>
+              <footer class="block__footer">
+                <div class="block__content">
+                  <h3 class="block__title">La palette du goût</h3>
+                  <span class="block__subtitle">Ménilmontant</span>
+                </div>
+                <div class="menu block__btn">
+                  <i class="block__like menu__like menu__like--regular far fa-heart fa-2x"></i>
+                  <i class="block__like menu__like menu__like--solid fas fa-heart fa-2x"></i>
+                </div>
+              </footer>
+            </a>
+      
+            <a class="block__card" href="./la_note_enchante.html">
+              <img src="../sass/ressources/images/restaurants/photo2noteenchanté.jpg" alt="" class="block__img">
+              <span class="block__item">Nouveau</span>
+              <footer class="block__footer">
+                <div class="block__content">
+                  <h3 class="block__title">La note enchantée</h3>
+                  <span class="block__subtitle">Charonne</span>
+                </div>
+                <div class="menu block__btn">
+                  <i class="block__like menu__like menu__like--regular far fa-heart fa-2x"></i>
+                  <i class="block__like menu__like menu__like--solid fas fa-heart fa-2x"></i>
+                </div>
+              </footer>
+            </a>
+      
+            <a class="block__card" href="./a_la_francaise.html">
+              <img src="../sass/ressources/images/restaurants/photo3alafrancaise.jpg" alt="" class="block__img">
+              <footer class="block__footer">
+                <div class="block__content">
+                  <h3 class="block__title">À la française</h3>
+                  <span class="block__subtitle">Cité Rouge</span>
+                </div>
+                <div class="menu block__btn">
+                  <i class="block__like menu__like menu__like--regular far fa-heart fa-2x"></i>
+                  <i class="block__like menu__like menu__like--solid fas fa-heart fa-2x"></i>
+                </div>
+              </footer>
+            </a>
+      
+            <a class="block__card" href="./le_delice_des_sens.html">
+              <img src="../sass/ressources/images/restaurants/photo4delicedessens.jpg" alt="" class="block__img">
+              <footer class="block__footer">
+                <div class="block__content">
+                  <h3 class="block__title">Le délice des sens</h3>
+                  <span class="block__subtitle">Folie-Méricourt</span>
+                </div>
+                <div class="menu block__btn">
+                  <i class="block__like menu__like menu__like--regular far fa-heart fa-2x"></i>
+                  <i class="block__like menu__like menu__like--solid fas fa-heart fa-2x"></i>
+                </div>
+              </footer>
+            </a>
+          </div>
         </div>
-        <a href="./la_palette_du_gout.html" class="container__block">
-            <img class="container__image" src="../sass/ressources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-            <div class="container__element">
-                <div class="container__txt">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
-                    <p class="container__item">Nouveau</p>
-                </div>
-                <i class="far fa-heart emptyheart--top"></i>
-                <i class="fas fa-heart"></i>
-            </div>           
-        </a>
-        <a href="./la_note_enchante.html" class="container__block">
-            <img class="container__image" src="../sass/ressources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
-            <div class="container__element">
-                <div class="container__txt">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                    <p class="container__item">Nouveau</p>
-                </div>
-                <i class="far fa-heart emptyheart--top"></i>
-                <i class="fas fa-heart"></i>
-            </div>           
-        </a>
-        <a href="./a_la_francaise.html" class="container__block">
-            <img class="container__image" src="../sass/ressources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
-            <div class="container__element">
-                <div class="container__txt">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
-                </div>
-                <i class="far fa-heart emptyheart--bottom--left"></i>
-                <i class="fas fa-heart"></i>
-            </div>           
-        </a>
-        <a href="./le_delice_des_sens.html" class="container__block">
-            <img class="container__image" src="../sass/ressources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
-            <div class="container__element">
-                <div class="container__txt">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
-                </div>
-                <i class="far fa-heart emptyheart--bottom--right"></i>
-                <i class="fas fa-heart"></i>
-            </div>           
-        </a>
-    </div>
+    </body>
     </main>
-</body>
+    
 <footer class="footer">  
     <img src="../sass/ressources/images/logo/ohmyfood.png">
     <div class="footer__item">
