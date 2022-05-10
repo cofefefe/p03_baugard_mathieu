@@ -68,7 +68,6 @@ p, h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 1px 5px 15px 0px rgba(0, 0, 0, 0.36);
 }
 .menu .btn {
   padding-top: 13px;

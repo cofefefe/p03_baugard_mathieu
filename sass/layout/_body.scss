@@ -51,7 +51,7 @@ p, h3{
             max-width:60%;
             @include flex_center;
             flex-direction:column;
-            box-shadow:1px 5px 15px 0px rgba(0,0,0,0.36);
+            
         }
         .btn{
         @include button;
