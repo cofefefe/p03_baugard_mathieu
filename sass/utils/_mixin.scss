@@ -19,8 +19,62 @@
     margin:auto;
     margin-bottom:45px;
     margin-top:50px;
+    transition:all 1000ms ease-in-out;
+}
+
+@mixin loader{
+
 }
 
 @mixin shadowregular {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@keyframes fadein{
+    0%{ 
+    opacity: 0;
+    transform: translateY(60px);}
+    100% {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+      }
+}
+
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0.5rem);
+    }
+    75% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+    // 0% {
+    //   transform: translateY(0);
+    // }
+  }
+
+  @keyframes animate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+@keyframes animate2{
+    0%{
+        transform:rotate(360deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+
 }

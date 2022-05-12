@@ -151,12 +151,14 @@ p, h3{
     .working{
         display:flex;
         position:relative;
+        transform:scale(1);
         nav{
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
-        justify-content:center;
+        justify-content:space-between;
         }
+
         h2{
             min-width:72%;
             position:relative;
@@ -166,12 +168,23 @@ p, h3{
             width:260px;
             margin-left:15px;
             margin-right:15px;
+            transition:transform .8s ease-in-out, box-shadow 0.5s ease-in;
+            &:hover{
+                box-shadow:4px -25px -4px 3px rgba(148,148,148,0.52);
+                transform:scale(1.2);
+            }
         }
         &__item{
             height:10px;
             width:25px;
             padding:8px;
         }
+    }
+}
+
+@media screen and(max-width:1024px) {
+    .maincard{
+        max-width:100%!important;
     }
 }
 /* Listes de restaurants INDEX*/
@@ -355,7 +368,7 @@ body{
   &__all{
       display:flex;
       flex-direction:row;
-      justify-content:space-between;
+      justify-content:space-around;
   }
 
   &__container{
@@ -393,21 +406,23 @@ body{
   
   
   .maincard {
-    background-color: white;
-    padding: 16px;
-    display: flex;
-    border-radius: 12px;
-    margin: 16px 0;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    cursor: pointer;
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    transform: scale(0);
-    max-width: 100%;
-    justify-content:space-between;
-  
+      max-width:315px;
+      min-width:305px;
+      background-color: white;
+      padding: 16px;
+      display: flex;
+      border-radius: 12px;
+      margin: 16px 0;
+      box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      cursor: pointer;
+      animation: itemAppear 1s;
+      animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+      animation-fill-mode: both;
+      transform: scale(0);
+      justify-content:space-between;
+      transition: all .2s ease-in-out;
+      
     &__txt {
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -433,19 +448,14 @@ body{
       font-weight: bold;
       display: flex;
       justify-content: flex-end;
-      align-items: flex-end;
-      margin-left:70px;
-      padding-right:30px;
+      align-items: flex-end;     
       font-family:robotobold, 'Times New Roman', Times, serif;
+      font-weight: bold;
+    padding-left: 0.5rem;
+      animation:jump;
+      margin-left:auto;
     }
-    @media screen and(max-width:1024px) {
-        .maincard{
-            &__price{
-                position:relative;
-                left:28%;
-            }
-        }
-    }
+    
   
     &__checked{
       background-color: #99e2d0;
@@ -488,6 +498,11 @@ body{
 }
 
 
+.maincard:hover .maincard__price{
+    animation:slideprice 0.6s ;
+}
+
+
 @keyframes itemAppear {
     0% {
       transform: scale(0)
@@ -511,22 +526,12 @@ body{
     height:30px;
 }
 
-.delay-1{
-    animation-delay: .4s;
-}
-
-.delay-2{
-    animation-delay: .8s
-}
-
-.delay-3{
-    animation-delay: 1.6s;
-}
 
 
 .btn:hover{
     box-shadow: 10px 0px 15px 5px rgb(255 121 218 / 50%), 0px 10px 15px 5px rgb(147 86 220 / 50%);
     border: rgba(255, 255, 255, 0.5 ) 1.6px solid;
+    background-image:linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%)
 }
 
 
