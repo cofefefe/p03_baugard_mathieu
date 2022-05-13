@@ -3,8 +3,7 @@
 /* footer index */
 
 .footer{
-    width:auto;
-    height:230px;
+    width:auto;  
     margin-bottom:0;
     background-color:#353535;
     color:white;
@@ -12,7 +11,7 @@
     font-family: roboto,'Times New Roman', Times, serif;
     line-height:10px;
 
-    &__p{
+    p{
         margin-bottom:0;
     }
 
@@ -42,7 +41,6 @@
 
     &__lasttxt{
         padding-bottom:30px;
-        padding-top:5px
     }
 
 

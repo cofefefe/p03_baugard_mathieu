@@ -1,25 +1,6 @@
-
-body{
-    width:100%;
-    margin:0px;
-}
-
-
-html{
-    width:100%;
-}
-
-h2{
-    font-family:title, 'Times New Roman', Times, serif;
-}
-
-
-p, h3{
-    font-family: roboto,'Times New Roman', Times, serif;
-}
 /* body de l'index : menu de selection "fonctionnement", menu "restaurants", menu présentation */
 
-/* " Explorez nos restaurant INDEX */
+/* Index top / follow our restaurant in a box */
 .menu{
     width:100%;
     @include flex_center;
@@ -65,8 +46,6 @@ p, h3{
     box-shadow:1px 5px 15px 0px rgba(0,0,0,0.36);
 }
 
-/* modif fichier */
-/* modif fichier 2 */
 
 /* Menu Fonctionnement INDEX*/
 
@@ -90,7 +69,11 @@ p, h3{
         width:280px;
         margin-left:5px;
         margin-right:5px;
-        
+        transition:transform .8s ease-in-out, box-shadow 0.5s ease-in;
+        &:hover{
+            box-shadow:4px -25px -4px 3px rgba(148,148,148,0.52);
+            transform:scale(1.2);
+        }
     }
 
     &__block{
@@ -107,6 +90,7 @@ p, h3{
         padding-bottom:15px;
         border-radius:20px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position:relative;
     }
 
     & a{
@@ -145,7 +129,7 @@ p, h3{
     }
 }
 
-/* MQ menu fonctionnement */
+/* Responsive working menu global rules */
 
 @media screen and (min-width:880px){
     .working{
@@ -156,23 +140,17 @@ p, h3{
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
-        justify-content:space-between;
+        justify-content:space-around;
         }
 
         h2{
             min-width:72%;
             position:relative;
-            left:-8%;
         }
         &__block{
             width:260px;
             margin-left:15px;
             margin-right:15px;
-            transition:transform .8s ease-in-out, box-shadow 0.5s ease-in;
-            &:hover{
-                box-shadow:4px -25px -4px 3px rgba(148,148,148,0.52);
-                transform:scale(1.2);
-            }
         }
         &__item{
             height:10px;
@@ -182,26 +160,21 @@ p, h3{
     }
 }
 
-@media screen and(max-width:1024px) {
-    .maincard{
-        max-width:100%!important;
-    }
-}
-/* Listes de restaurants INDEX*/
+
+
 .container__all{
     margin: 20px 30px 50px 30px;
 }
 body{
     background-color:#f6f6f6;
 }
-
+/* Block "restaurants" position/design/ index restaurant / Homepage */
 .block {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap:32px;
     row-gap: 32px;
     border-radius: 16px;
-    position: relative;
     text-decoration: none;
     color: inherit;
     margin-bottom:20px;
@@ -217,6 +190,7 @@ body{
           flex-direction:column;
           margin-bottom:-10px;
           border-radius:15px;
+          position:relative;
           
           p{
               margin:0;
@@ -244,8 +218,8 @@ body{
     }
   
     &__item {
-      background-color: #99e2d0;
-      color: darken(#99e2d0, 50%);
+      background-color: $color-tertiary;
+      color: darken($color-tertiary, 50%);
       padding: 8px;
       border-radius: 2px;
       position: absolute;
@@ -254,14 +228,14 @@ body{
       font-family:roboto, times, serif;
 
         &--first{
-            
+            font-family:roboto, times, serif;
             background-color: #99e2d0;
             color: darken(#99e2d0, 50%);
             padding: 8px;
-            border-radius: 5px;
+            border-radius: 2px;
             position: absolute;
             top:16px;
-            right: 704px;
+            right: 12px;
         }
     }
   
@@ -305,13 +279,34 @@ body{
     }
 
 }
+/* Responsive "working" menu make a column */
+@media screen and(max-width:1024px){
+    .block{
+        position:relative;
+        &__card{
+            position:relative;
+        }
+        &__item{
+            position: absolute;
+            top: 15px;
+            left: 376px;
+
+            &--first{
+                top: 20px;
+                position: absolute;
+                left: 376px;
+                z-index: 1;
+            }
+        }
+    }
+}
 
 .restaurants__title{
     font-size:23px;
 }
 
 
-
+/* position and skin of heart icon*/
 .menu{
     &__like{
         &--regular{
@@ -333,13 +328,14 @@ body{
     }
 }
 
+/* Rules of solid heart*/
 .menu:hover .fas{
     opacity:1;
     z-index: 1;
     transform:scale(1.1);
 }
 
-/* Body secondary-page : baneer pic, menus des restaurants (entrees,plats,desserts)*/
+/* Body secondary-page : baneer pic, menus (entrees,plats,desserts)*/
 .main {
 
     &__like{
@@ -369,6 +365,7 @@ body{
       display:flex;
       flex-direction:row;
       justify-content:space-around;
+      margin: 0 10px;
   }
 
   &__container{
@@ -392,36 +389,36 @@ body{
    &__block {
     max-width: 100%;
     overflow: hidden;
-    padding: 0 16px;
+    padding: 0 19px 0 10px;
     
    }
   
     &__title {
     text-transform: uppercase;
-    border-bottom:green solid 3px;
-    width:20px;
-    text-align:left
-      
+    border-bottom:$color-tertiary solid 3px;
+    width:40px;
+    text-align:left;
+    padding-bottom:8px;
+    font-weight:lighter; 
     }
   
   
   .maincard {
       max-width:315px;
-      min-width:305px;
+      min-width:315px;
       background-color: white;
       padding: 16px;
       display: flex;
       border-radius: 12px;
       margin: 16px 0;
-      box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+      box-shadow:0px 0px 8px 3px rgba(148,148,148,0.52);
       overflow: hidden;
       cursor: pointer;
-      animation: itemAppear 1s;
-      animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+      animation: appear .6s ease-in-out;
       animation-fill-mode: both;
       transform: scale(0);
       justify-content:space-between;
-      transition: all .2s ease-in-out;
+
       
     &__txt {
       white-space: nowrap;
@@ -490,49 +487,58 @@ body{
   }  
 }
 
+/* Rules animation checked */
 .maincard:hover .maincard__checked{
     margin-right:-17px;
 } 
 .maincard:hover .maincard__Icon{
     transform:rotate(150deg);
 }
-
-
 .maincard:hover .maincard__price{
     animation:slideprice 0.6s ;
 }
 
 
-@keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
-}
-@media screen and (max-width:1024px){
+/* Responsive menu secondary page*/
+@media screen and (max-width:1140px){
     .main{
         &__all{
             display:flex;
             flex-direction:column;
         }
     }
+    .maincard{
+        min-width:95%!important;
+        max-width:none;
+        margin:0 20px;
+
+    }
 }
 
+/* heart place with smartphone */
+@media screen and(max-width:500px) {
+    .main{
+        &__like{
+            &--full{
+                position:relative;
+                bottom: 34px;
+                left: 0.5px;
+            }
+        }
+    }
+}
+/* btn rules / mixins and hover */
 .btn{
     @include button;
     text-align:center;
     height:30px;
+    &:hover{
+        box-shadow: 10px 0px 15px 5px rgb(255 121 218 / 50%), 0px 10px 15px 5px rgb(147 86 220 / 50%);
+        border: rgba(255, 255, 255, 0.5 ) 1.6px solid;
+        background-image:linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%)
+    }
 }
 
-
-
-.btn:hover{
-    box-shadow: 10px 0px 15px 5px rgb(255 121 218 / 50%), 0px 10px 15px 5px rgb(147 86 220 / 50%);
-    border: rgba(255, 255, 255, 0.5 ) 1.6px solid;
-    background-image:linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%)
-}
 
 
 
