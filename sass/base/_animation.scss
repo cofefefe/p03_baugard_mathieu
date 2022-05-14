@@ -16,14 +16,6 @@
   }
 }
 
-@keyframes itemAppear {
-  0% {
-    transform: scale(0)
-  }
-  100%{
-    transform:scale(1)
-  }
-}
 
 .delay-1{
   animation-delay: 1s;
@@ -45,12 +37,12 @@
   display:flex;
   flex-direction:row;
   justify-content:center;
-  z-index: 2;
-  inset: 0;
-  background-color:#ffffff;
-  opacity:0.9;
   height:100vh;
-  animation:copperfield 4s ease-in, opticopperfield 1.5s ease-in-out;
+  opacity:0.9;
+  z-index:3;
+  background-color:white;
+  top:0;
+  animation:copperfield 3s ease-in, opticopperfield 2s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -64,7 +56,9 @@
   border-top:4px #9356DC solid;
   animation: animate .4s linear infinite;
   animation-duration:4s;
-  margin-top:30%;
+  top:40%;
+  animation-delay: -3s;
+  animation-fill-mode: both;
 }
 
 @keyframes animate{
@@ -117,21 +111,25 @@
               0 0 0 15px #FF79DA11,
               0 0 30px #FF79DA,
               0 0 50px #FF79DA; 
-}
+            }
 
 .container .ring:nth-child(2){
   animation:animate2 .4s linear infinite;
   animation-duration:4s
 }
+
 .container .ring:nth-child(3){
   position:absolute;
   top:-66.66px;
   animation:animate2 .4s linear infinite;
-  animation-duration:4s;
-  animation-delay:-3s;
+  animation-duration:3s;
+  animation-delay:-2s;
   border-top:solid transparent 4px;
   border-left: 4px solid #e41cf8;
+  top:40%;
+  
 }
+
 .container .ring:before{
   content: '';
   position:absolute;
@@ -145,13 +143,17 @@
               0 0 0 10px #9356DC22,
               0 0 0 15px #9356DC11,
               0 0 30px #9356DC,
-              0 0 50px #9356DC;       
+              0 0 50px #9356DC;   
 }
+
+
+
 .container .ring:nth-child(2){
   border-top: 4px solid transparent;
   border-left:4px solid #99E2D0;
-  animation-delay:-1s;
+  animation-delay:-2s;
 }
+
 
 @keyframes copperfield{
   0%{

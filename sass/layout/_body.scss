@@ -61,7 +61,7 @@
         font-family:roboto, 'Times New Roman', Times, serif;
         margin-left:5%;
         font-size:22px;
-        min-width:100%;
+        min-width:90%;
         align-self:flex-start
     }
 
@@ -73,6 +73,7 @@
         &:hover{
             box-shadow:4px -25px -4px 3px rgba(148,148,148,0.52);
             transform:scale(1.2);
+            filter:brightness(1.2)
         }
     }
 
@@ -131,7 +132,7 @@
 
 /* Responsive working menu global rules */
 
-@media screen and (min-width:880px){
+@media screen and (min-width:920px){
     .working{
         display:flex;
         position:relative;
@@ -140,17 +141,13 @@
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
-        justify-content:space-around;
+        justify-content:space-between;
         }
 
-        h2{
-            min-width:72%;
-            position:relative;
-        }
         &__block{
             width:260px;
-            margin-left:15px;
-            margin-right:15px;
+            margin-left: 20px;
+            margin-right: 20px;
         }
         &__item{
             height:10px;
@@ -241,7 +238,7 @@ body{
   
     &__footer {
       padding: 1rem;
-      position: relative;
+      
       display: flex;
       align-items: center;
     }
@@ -315,13 +312,7 @@ body{
             top:20px;
         }
         &--solid{
-            color:transparent;
-            background-clip:text;
-            background-image: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-            opacity:0;
-            transition:all 500ms ease-in-out;
-            -webkit-background-clip: text;
-            position:relative;
+            @include heart;
             bottom:17px;
          
         }
@@ -340,13 +331,9 @@ body{
 
     &__like{
         &--full{
-            position:relative;
+            
             right:36px;
-            opacity:0;
-            color:transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-image:$gradient-color;
+            @include heart;
             transition:transform 500ms, opacity 600ms;
         }
     }
@@ -482,7 +469,7 @@ body{
     &__icon {
       color:#99e2d0;
       transition: transform 500ms;
-      transform:rotate(210deg);
+      transform:rotate(420deg);
     }
   }  
 }
@@ -492,11 +479,9 @@ body{
     margin-right:-17px;
 } 
 .maincard:hover .maincard__Icon{
-    transform:rotate(150deg);
+    transform:rotate(300deg);
 }
-.maincard:hover .maincard__price{
-    animation:slideprice 0.6s ;
-}
+
 
 
 /* Responsive menu secondary page*/
@@ -534,8 +519,9 @@ body{
     height:30px;
     &:hover{
         box-shadow: 10px 0px 15px 5px rgb(255 121 218 / 50%), 0px 10px 15px 5px rgb(147 86 220 / 50%);
-        border: rgba(255, 255, 255, 0.5 ) 1.6px solid;
-        background-image:linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%)
+        background-image:linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%);
+        filter:brightness(1.3);
+        color:black;
     }
 }
 

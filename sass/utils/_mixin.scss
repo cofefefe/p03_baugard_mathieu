@@ -6,10 +6,8 @@
 
 
 @mixin button{
-    padding-top:13px;
-    padding-bottom:13px;
-    padding-left:20px;
-    padding-right:20px;
+    transition:all 1000ms ease-in-out;
+    padding:13px 20px;
     background:$gradient-color;
     border-radius:35px;
     align-self:center;
@@ -19,11 +17,16 @@
     margin:auto;
     margin-bottom:45px;
     margin-top:50px;
-    transition:all 1000ms ease-in-out;
 }
 
-@mixin loader{
-
+@mixin heart{
+    color:transparent;
+    background-clip:text;
+    -webkit-background-clip: text;
+    background-image: $gradient-color;
+    opacity:0;
+    transition:all 500ms ease-in-out;   
+    position:relative;
 }
 
 @mixin shadowregular {
@@ -41,40 +44,3 @@
       }
 }
 
-@keyframes jump {
-    0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(0.5rem);
-    }
-    75% {
-      transform: translateY(-0.5rem);
-    }
-    100% {
-      transform: translateY(0);
-    }
-    // 0% {
-    //   transform: translateY(0);
-    // }
-}
-
-@keyframes animate{
-    0%{
-        transform:rotate(0deg);
-    }
-    100%{
-        transform:rotate(360deg);
-    }
-
-}
-
-@keyframes animate2{
-    0%{
-        transform:rotate(360deg);
-    }
-    100%{
-        transform:rotate(0deg);
-    }
-
-}
