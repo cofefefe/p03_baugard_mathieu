@@ -382,6 +382,10 @@ body {
   font-weight: lighter;
 }
 .main .maincard {
+  animation-name: appear;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  transform: scale(0);
   max-width: 315px;
   min-width: 315px;
   background-color: white;
@@ -392,11 +396,7 @@ body {
   box-shadow: 0px 0px 8px 3px rgba(148, 148, 148, 0.52);
   overflow: hidden;
   cursor: pointer;
-  animation-name: appear;
-  animation-fill-mode: both;
-  transform: scale(0);
   justify-content: space-between;
-  animation-duration: 1s;
 }
 .main .maincard__txt {
   white-space: nowrap;
