@@ -601,6 +601,9 @@ header__logo {
 .footer__lasttxt {
   padding-bottom: 30px;
 }
+.footer__lasttxt:hover {
+  cursor: pointer;
+}
 .footer__txt {
   margin-left: 0px;
 }
