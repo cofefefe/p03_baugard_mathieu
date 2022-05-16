@@ -94,7 +94,7 @@
   width: 280px;
   margin-left: 5px;
   margin-right: 5px;
-  transition: transform 0.8s ease-in-out, box-shadow 0.5s ease-in;
+  transition: transform 0.4s ease-in-out, box-shadow 0.5s ease-in;
 }
 .working__block:hover {
   box-shadow: 4px -25px -4px 3px rgba(148, 148, 148, 0.52);
@@ -645,7 +645,7 @@ header__logo {
   z-index: 3;
   background-color: white;
   top: 0;
-  animation: copperfield 5s ease-in, opticopperfield 1.5s ease-in-out;
+  animation: copperfield 5000ms ease-in, opticopperfield 1500ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -713,10 +713,10 @@ header__logo {
   top: -66.66px;
   animation: animate2 0.4s linear infinite;
   animation-duration: 3s;
-  animation-delay: -2s;
+  animation-delay: -1s;
   border-top: solid transparent 4px;
   border-left: 4px solid #e41cf8;
-  top: 40%;
+  top: 30%;
 }
 
 .container .ring:before {
@@ -734,7 +734,7 @@ header__logo {
 .container .ring:nth-child(2) {
   border-top: 4px solid transparent;
   border-left: 4px solid #99E2D0;
-  animation-delay: -2s;
+  animation-delay: -1s;
 }
 
 @keyframes copperfield {
