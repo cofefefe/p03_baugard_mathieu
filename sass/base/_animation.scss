@@ -1,9 +1,12 @@
 @keyframes appear {
     0% {
-      transform: scale(0)
+      transform: scale(0) translateY(800px);
+      
+
     }
     100% {
-      transform: scale(1);
+      transform: scale(1) translateY(0);
+
     }
 }
 
@@ -16,18 +19,6 @@
   }
 }
 
-
-.delay-1{
-  animation-delay: 1s;
-}
-
-.delay-2{
-  animation-delay: 2s
-}
-
-.delay-3{
-  animation-delay: 3s;
-}
 
 
 /* ALL rules about load spinner : style, position, animation, media querry*/
@@ -42,7 +33,7 @@
   z-index:3;
   background-color:white;
   top:0;
-  animation:copperfield 3s ease-in, opticopperfield 2s ease-in-out;
+  animation:copperfield 5s ease-in, opticopperfield 1.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -54,10 +45,9 @@
   border-radius:50%;
   margin:-30px;
   border-top:4px #9356DC solid;
-  animation: animate .4s linear infinite;
+  animation: animate .6s linear infinite;
   animation-duration:4s;
   top:40%;
-  animation-delay: -3s;
   animation-fill-mode: both;
 }
 
@@ -146,14 +136,11 @@
               0 0 50px #9356DC;   
 }
 
-
-
 .container .ring:nth-child(2){
   border-top: 4px solid transparent;
   border-left:4px solid #99E2D0;
   animation-delay:-2s;
 }
-
 
 @keyframes copperfield{
   0%{

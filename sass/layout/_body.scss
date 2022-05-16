@@ -286,12 +286,12 @@ body{
         &__item{
             position: absolute;
             top: 15px;
-            left: 376px;
+            right: 5px;
 
             &--first{
                 top: 20px;
                 position: absolute;
-                left: 376px;
+                right:5px;
                 z-index: 1;
             }
         }
@@ -391,6 +391,7 @@ body{
   
   
   .maincard {
+      
       max-width:315px;
       min-width:315px;
       background-color: white;
@@ -401,10 +402,11 @@ body{
       box-shadow:0px 0px 8px 3px rgba(148,148,148,0.52);
       overflow: hidden;
       cursor: pointer;
-      animation: appear .6s ease-in-out;
+      animation-name:appear;
       animation-fill-mode: both;
       transform: scale(0);
       justify-content:space-between;
+      animation-duration:1s;
 
       
     &__txt {
@@ -436,7 +438,6 @@ body{
       font-family:robotobold, 'Times New Roman', Times, serif;
       font-weight: bold;
     padding-left: 0.5rem;
-      animation:jump;
       margin-left:auto;
     }
     
@@ -482,6 +483,22 @@ body{
     transform:rotate(300deg);
 }
 
+/*maincard appearance delay*/
+.delay-1{
+    animation-delay: 0.6s;
+}
+  
+.delay-2{
+    animation-delay: 1.2s
+}
+  
+.delay-3{
+    animation-delay: 1.6s;
+}
+
+.delay-4{
+    animation-delay:2s;
+}
 
 
 /* Responsive menu secondary page*/

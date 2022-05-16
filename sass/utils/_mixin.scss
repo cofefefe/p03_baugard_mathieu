@@ -6,7 +6,7 @@
 
 
 @mixin button{
-    transition:all 1000ms ease-in-out;
+    transition:all 400ms ease-in-out;
     padding:13px 20px;
     background:$gradient-color;
     border-radius:35px;
@@ -33,14 +33,5 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-@keyframes fadein{
-    0%{ 
-    opacity: 0;
-    transform: translateY(60px);}
-    100% {
-    opacity: 1;
-    transform: translateY(0px);
-    visibility: visible;
-      }
-}
+
 
