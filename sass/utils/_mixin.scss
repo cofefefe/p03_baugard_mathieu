@@ -15,8 +15,9 @@
     @include flex-center;
     color:white;
     margin:auto;
-    margin-bottom:45px;
-    margin-top:50px;
+    margin-bottom:50px;
+    margin-top:0;
+    cursor:pointer;
 }
 
 @mixin heart{
@@ -30,7 +31,7 @@
 }
 
 @mixin shadowregular {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
 }
 
 
